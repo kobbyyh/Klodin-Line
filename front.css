@@ -1,0 +1,70 @@
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: inherit;
+}
+img {
+    width: 100%;
+}
+
+body {
+    color: brown;
+    padding: 0px;
+    background-color: beige;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.menu {
+    width: 40px;
+    text-align-last: left;
+}
+
+/*----------------- navigation bar---------------- */
+.nav-bar {
+    text-align: right;
+    display: block;
+}
+
+.nav-bar a {
+    /* margin: 1% 1% 1% 1%; */
+    /* color: black; */
+    /* border: 1px solid red; */
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    justify-content: space-between;
+    padding-inline: 10px;
+    /* border: 20px solid red; */
+    /* border: 10px solid red; */
+    background-color: yellow;
+    border-radius: 10px;
+    padding: 10px 25px;
+}
+
+.nav-bar a:hover {
+    color: red;
+    /* padding: .5px; */
+}
+
+.interface {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    padding-top: 2px;
+    padding-right: 2rem;
+    padding-bottom: 2px;
+    padding-left: 2rem;
+    background-color: rgb(59, 56, 56);
+}
+.big-logo {width: 200px; height: 100%;}
+

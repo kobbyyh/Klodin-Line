@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Alkatra';
+  src: url(KayyBusiness-Poultry\font\static) format('truetype') format('truetype');
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'alkatra', Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(134, 65, 65);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #9e5555;
+  color: #000000;
+  border-bottom: 2px solid #cccccc;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #000000;
+}
+
+.nav-link:hover {
+  color: #b7dc15;
+  /* background-color: #0ceb1b; */
+}
+
+.signup-btn {
+  padding: 8px 20px;
+  border: 2px solid yellow;
+  border-radius: 20px;
+  background-color: #ffc107;
+  color: #000000;
+}
+
+.signup-btn:hover {
+  background-color: #ffdf7f;
+  color: #000000;
+}
+
+.cart-logo {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.page-content {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #cccccc;
+}
+
+
+
+/* animation-------------- */
+#card-section {
+
+  transform: translateX(-100%);
+  animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* quite ok */
+/* .animate-left {
+      animation: slide-in-left 1s forwards;
+      opacity: 0;
+    }
+    
+    @keyframes slide-in-left {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    } */
+/* quite ok ends */
+
+/*Signup Page*/
+/* .custom-image-size {
+  width: 10%;
+} */
