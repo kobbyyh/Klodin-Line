@@ -18,9 +18,15 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
   <!-- the links i pprovided -->
   <link rel="stylesheet" href="boot.css">
-  <script src="boot.js"></script>
+  
   <link href="https://fonts.googleapis.com/css?family=Alkatar&display=swap" rel="stylesheet">
 </head>
 
@@ -31,9 +37,10 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="Kingkayy farms.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-        KayyWrld
+        <img src="new logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+         <b>KayyWrld</b>
       </a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,132 +51,39 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
         </ul>
         <div class="d-flex flex-column flex-md-row">
           <a href="order-details.html"><img src="cart.png" width="30" height="30" alt="Cart"></a>
-          <a href="signup.html"><button class="btn btn-warning ml-md-2 mt-10%">Sign Up</button></a>
+          <a href="login.html"><button class="btn btn-warning ml-md-2 mt-10%">Login</button></a>
         </div>
       </div>
     </div>
   </nav>
-
-  <!-- <div class="container-fluid my-7"> -->
-  <!-- <div class="row align-items-center"> -->
-  <!-- <div class="col-md-6"> -->
-  <!-- <div class="card">sdf</div>
-        <div class="card-body">sd</div> -->
-  <!-- <p class="card-text mb-3">sds </p> -->
-  <!-- </div> -->
-  <!-- </div> -->
-  <!-- </div> -->
-
-  <!-- ======== -->
   <div class="container mt-5 ">
     <div class="row">
-      <div class="col-md-12"><h2>KAYYWRLD arts & design</h2></div>
+      <div class="col-md-12">
+        <h2>New Items Have Been Added!</h2>
+      </div>
     </div>
 
     <div class="row">
       <div class="col-md-6">
         <div class="card mb-3" id="card-section">
           <div class="card-body">
-            <h5 class="card-title">You Are At The Right Place! </h5>
-            <p class="card-text animate-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.orem ipsum dolor
-              sit amet, consectetur adipiscing elorem ipsum dolor sit amet, consectetur adipiscing elorem ipsum dolor
-              sit amet, consecteturorem ipsum dolor sit amet, consectetur adipiscing elorem ipsum dolor sit amet,
-              consectetur adipiscing elorem ipsum dolor sit amet, consectetur adipiscing elorem ipsum dolor sit amet,
-              consectetur adipiscing el adipiscing el Nullam ut felis mauris et dolor bibendum lacinia. Sed sollicitudin
-              malesuada dui, et interdum velit convallis vel. In eu augue dolor.</p>
+            <h3 class="card-title"> Come let's shop together</h3>
+            <p class="card-text animate-left"></p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 d-flex justify-content-end"><img src="kayywrld-big-size.png" alt="Logo" class="d-none d-md-block" width="300" height="300"></div>
+      <div class="hoodie col-md-5 d-flex justify-content-end"><img src="hoodie.png" alt="Logo" class="d-none d-md-block"
+          width="300" height="300"></div>
     </div>
   </div>
-
-
-
-
-
-
-  <!-- <div class="container-fluid my-4">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card">
-                    <img src="product1.jpg" class="card-img-top rounded" alt="Product Image">
-                    <div class="card-body">
-                      <h5 class="card-title">Product 1</h5>
-                      <p class="card-text">$20</p>
-                      <button onclick="addToCart(20)" class="btn btn-primary mr-2">Add to Cart</button>
-                      <button class="increment">+</button>
-                      <span class="quantity">1</span>
-                      <button class="decrement">-</button>
-                      <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
-                    </div>
-                  </div>
-                </div> 
-                           
-
-                <div class="col-md-6">
-                  <div class="card">
-                    <div style="max-width: 300px;">
-                      <img src="1.png" class="card-img-top rounded img-fluid" alt="Product Image">
-                    </div>
-                    
-                    
-                    <div class="card-body">
-                      <h5 class="card-title">Product 2</h5>
-                      <p class="card-text">$30</p>
-                      <button onclick="addToCart(30)" class="btn btn-primary mr-2">Add to Cart</button>
-                      <button class="increment">+</button>
-                      <span class="quantity">1</span>
-                      <button class="decrement">-</button>
-                      
-                      <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              
-              <div class="row mt-4">
-                <div class="col-md-6">
-                  <div class="card">
-                    <img src="product3.jpg" class="card-img-top rounded" alt="Product Image">
-                    <div class="card-body">
-                      <h5 class="card-title">Product 3</h5>
-                      <p class="card-text">$40</p>
-                      <button onclick="addToCart(40)" class="btn btn-primary mr-2">Add to Cart</button>
-                      <button class="increment">+</button>
-                      <span class="quantity">1</span>
-                      <button class="decrement">-</button>
-                      <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card">
-                    <img src="product2.jpg" class="card-img-top rounded" alt="Product Image">
-                    <div class="card-body">
-                      <h5 class="card-title">Product 2</h5>
-                      <p class="card-text">$30</p>
-                      <button onclick="addToCart(30)" class="btn btn-primary mr-2">Add to Cart</button>
-                      <button class="increment">+</button>
-                      <span class="quantity">1</span>
-                      <button class="decrement">-</button>
-                      
-                      <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-  <!-- ---------------------------------- -->
-
 
   <div class="container-fluid my-4">
     <div class="row">
@@ -177,11 +91,12 @@
         <div class="card">
           <img src="1.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 1</h5>
-            <p class="card-text">$20</p>
-            <button onclick="addToCart(20)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWrld - Beer Buddies T-shirt</h5>
+            <p class="card-text">₹10</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="10" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -191,11 +106,12 @@
         <div class="card">
           <img src="2.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 2</h5>
-            <p class="card-text">$30</p>
-            <button onclick="addToCart(30)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWrld - Logo T-shirt</h5>
+            <p class="card-text">₹65</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="65" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -205,11 +121,12 @@
         <div class="card">
           <img src="3.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 3</h5>
-            <p class="card-text">$40</p>
-            <button onclick="addToCart(40)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWrld - Hope</h5>
+            <p class="card-text">₹75</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="75" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -217,13 +134,14 @@
       </div>
       <div class="col-md-3">
         <div class="card">
-          <img src="4.png" class="card-img-top rounded" alt="Product Image">
+          <img src="9.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 4</h5>
-            <p class="card-text">$50</p>
-            <button onclick="addToCart(50)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWrld - Phoenix T-shirt</h5>
+            <p class="card-text">₹85</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="85" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -237,11 +155,12 @@
         <div class="card">
           <img src="5.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 5</h5>
-            <p class="card-text">$20</p>
-            <button onclick="addToCart(20)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWrld - Simplicity T-shirt</h5>
+            <p class="card-text">₹150</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="150" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -251,11 +170,12 @@
         <div class="card">
           <img src="6.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 6</h5>
-            <p class="card-text">$30</p>
-            <button onclick="addToCart(30)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWrld - Unknown</h5>
+            <p class="card-text">₹90</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="90" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -265,11 +185,12 @@
         <div class="card">
           <img src="7.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 7</h5>
-            <p class="card-text">$40</p>
-            <button onclick="addToCart(40)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWrld - LA/NYC</h5>
+            <p class="card-text">₹250</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="50" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -277,13 +198,14 @@
       </div>
       <div class="col-md-3">
         <div class="card">
-          <img src="8.png" class="card-img-top rounded" alt="Product Image">
+          <img src="10.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 8</h5>
-            <p class="card-text">$50</p>
-            <button onclick="addToCart(50)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWrld - Gray Lacoste</h5>
+            <p class="card-text">₹950</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="950" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -295,41 +217,30 @@
     <div class="row">
       <div class="col-md-3">
         <div class="card">
-          <img src="9.png" class="card-img-top rounded" alt="Product Image">
+          <img src="13.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 9</h5>
-            <p class="card-text">$20</p>
-            <button onclick="addToCart(20)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">Kayywrld - Arts & design Hoodie</h5>
+            <p class="card-text">₹50</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="50" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="card">
-          <img src="10.png" class="card-img-top rounded" alt="Product Image">
-          <div class="card-body">
-            <h5 class="card-title">Product 10</h5>
-            <p class="card-text">$30</p>
-            <button onclick="addToCart(30)" class="btn btn-primary mr-2">Add to Cart</button>
-            <button class="increment">+</button>
-            <span class="quantity">1</span>
-            <button class="decrement">-</button>
-            <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
-          </div>
-        </div>
-      </div>
+      
       <div class="col-md-3">
         <div class="card">
           <img src="11.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 11</h5>
-            <p class="card-text">$40</p>
-            <button onclick="addToCart(40)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWlrd - Phoenix with Globe</h5>
+            <p class="card-text">₹420</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="420" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -337,13 +248,29 @@
       </div>
       <div class="col-md-3">
         <div class="card">
-          <img src="11.png" class="card-img-top rounded" alt="Product Image">
+          <img src="8.png" class="card-img-top rounded" alt="Product Image">
           <div class="card-body">
-            <h5 class="card-title">Product 12</h5>
-            <p class="card-text">$50</p>
-            <button onclick="addToCart(50)" class="btn btn-primary mr-2">Add to Cart</button>
+            <h5 class="card-title">KayyWrld - Hello World hoodie </h5>
+            <p class="card-text">₹550</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="550" class="btn btn-primary mr-2">Add to
+              Cart</button>
             <button class="increment">+</button>
-            <span class="quantity">1</span>
+            <span class="quantity">0</span>
+            <button class="decrement">-</button>
+            <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="12.png" class="card-img-top rounded" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">KayyWrld - By the Sea Side Hoodie</h5>
+            <p class="card-text">₹500</p>
+            <button onclick="addToCart(1, this.dataset.price)" data-price="500" class="btn btn-primary mr-2">Add to
+              Cart</button>
+            <button class="increment">+</button>
+            <span class="quantity">0</span>
             <button class="decrement">-</button>
             <button class="btn btn-success"><a href="order-details.html">Proceed to Checkout</a></button>
           </div>
@@ -351,35 +278,19 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-  <p>Cart total: $<span id="cartTotal">0</span></p>
-  </div>
-
-
-
-
-  ----------------------------------------------------------
-
-
+  
 
   </div>
 
   <!-- footer -->
-
   <footer class="custom-footer bg-dark pt-5 pb-3 mt-4">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
           <h5>Get To Know Us</h5>
           <ul class="list-unstyled">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Team</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="/about.html#our-team">Our Team</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">Blog</a></li>
           </ul>
@@ -419,332 +330,72 @@
         </div>
       </div>
       <div>
-        <p class="copyright" align="center">&copy2023, KayyWlrdArtsAndDesigns.com <br>Legal Rights Reserved </p>
+        <p class="copyright" align="center">&copy2023, KayyWrldArtsAndDesigns.com <br>Legal Rights Reserved </p>
       </div>
-      </div>
-    
+    </div>
+
   </footer>
-  
+
 
   <script>
-    //  // Set initial cart total
-    // let cartTotal = 0;
-
-    // // Get all increment buttons
-    // const incrementButtons = document.querySelectorAll('.increment');
-
-    // // Loop through each increment button and add a click event listener
-    // incrementButtons.forEach(button => {
-    //   button.addEventListener('click', () => {
-    //     // Get the quantity element for this product
-    //     const quantityElement = button.parentNode.querySelector('.quantity');
-
-    //     // Get the current quantity value
-    //     let quantity = Number(quantityElement.innerText);
-
-    //     // Increment the quantity value
-    //     quantity++;
-
-    //     // Set the new quantity value in the quantity element
-    //     quantityElement.innerText = quantity;
-    //   });
-    // });
-
-    // // Get all decrement buttons
-    // const decrementButtons = document.querySelectorAll('.decrement');
-
-    // // Loop through each decrement button and add a click event listener
-    // decrementButtons.forEach(button => {
-    //   button.addEventListener('click', () => {
-    //     // Get the quantity element for this product
-    //     const quantityElement = button.parentNode.querySelector('.quantity');
-
-    //     // Get the current quantity value
-    //     let quantity = Number(quantityElement.innerText);
-
-    //     // If the quantity is already 1, do not decrement further
-    //     if (quantity === 1) {
-    //       return;
-    //     }
-
-    //     // Decrement the quantity value
-    //     quantity--;
-
-    //     // Set the new quantity value in the quantity element
-    //     quantityElement.innerText = quantity;
-    //   });
-    // });
-
-    // // Function to add a product to the cart
-    // function addToCart(price) {
-    //   // Get the quantity element for this product
-    //   const quantityElement = event.target.parentNode.querySelector('.quantity');
-
-    //   // Get the current quantity value
-    //   const quantity = Number(quantityElement.innerText);
-
-    //   // Calculate the total price for this product
-    //   const totalPrice = price * quantity;
-
-    //   // Add the total price to the cart total
-    //   cartTotal += totalPrice;
-
-    //   // Update the cart total in the DOM
-    //   const cartTotalElement = document.getElementById('cartTotal');
-    //   cartTotalElement.innerText = cartTotal.toFixed(2);
-    // }
-
-    // ---------------------------------------------------------
-    // Set initial cart total
-    // let cartTotal = 0;
-
-    // // Get all increment buttons
-    // const incrementButtons = document.querySelectorAll('.increment');
-
-    // // Loop through each increment button and add a click event listener
-    // incrementButtons.forEach(button => {
-    //   button.addEventListener('click', () => {
-    //     // Get the quantity element for this product
-    //     const quantityElement = button.parentNode.querySelector('.quantity');
-
-    //     // Get the current quantity value
-    //     let quantity = Number(quantityElement.innerText);
-
-    //     // Increment the quantity value
-    //     quantity++;
-
-    //     // Set the new quantity value in the quantity element
-    //     quantityElement.innerText = quantity;
-    //   });
-    // });
-
-    // // Get all decrement buttons
-    // const decrementButtons = document.querySelectorAll('.decrement');
-
-    // // Loop through each decrement button and add a click event listener
-    // decrementButtons.forEach(button => {
-    //   button.addEventListener('click', () => {
-    //     // Get the quantity element for this product
-    //     const quantityElement = button.parentNode.querySelector('.quantity');
-
-    //     // Get the current quantity value
-    //     let quantity = Number(quantityElement.innerText);
-
-    //     // If the quantity is already 1, do not decrement further
-    //     if (quantity === 1) {
-    //       return;
-    //     }
-
-    //     // Decrement the quantity value
-    //     quantity--;
-
-    //     // Set the new quantity value in the quantity element
-    //     quantityElement.innerText = quantity;
-    //   });
-    // });
-
-    // // Add an event listener to the Add to Cart button to calculate the total price for the product
-    // const addToCartButton = document.querySelector('.btn-primary');
-    // addToCartButton.addEventListener('click', () => {
-    //   // Get the quantity element for this product
-    //   const quantityElement = addToCartButton.parentNode.querySelector('.quantity');
-
-    //   // Get the current quantity value
-    //   const quantity = Number(quantityElement.innerText);
-
-    //   // Get the product price
-    //   const productPrice = Number(document.querySelector('.product-price').innerText);
-
-    //   // Calculate the total price for this product
-    //   const totalPrice = productPrice * quantity;
-
-    //   // Add the total price to the cart total
-    //   cartTotal += totalPrice;
-
-    //   // Update the cart total in the DOM
-    //   const cartTotalElement = document.getElementById('cartTotal');
-    //   cartTotalElement.innerText = cartTotal.toFixed(2);
-    // });
-
-    // // Add an event listener to the - button to calculate the total price for the product
-    // const productDecrementButton = document.querySelector('.decrement');
-    // productDecrementButton.addEventListener('click', () => {
-    //   const quantityElement = productDecrementButton.parentNode.querySelector('.quantity');
-    //   const Quantity = Number(quantityElement.innerText);
-    //   const productPrice = Number(document.querySelector('.addToCart').innerText);
-
-    //   const totalPrice = Price * Quantity;
-
-    //   const cartTotalElement = document.getElementById('cartTotal');
-    //   cartTotalElement.innerText = totalPrice.toFixed(2);
-    // });
-
-    // // Add an event listener to the + button to calculate the total price for the product
-    // const productIncrementButton = document.querySelector('.increment');
-    // productIncrementButton.addEventListener('click', () => {
-    //   const quantityElement = productIncrementButton.parentNode.querySelector('.quantity');
-    //   const Quantity = Number(quantityElement.innerText);
-    //   const productPrice = Number(document.querySelector('.product-price').innerText);
-
-
-    //   const totalPrice = Price * Quantity;
-
-    //   const cartTotalElement = document.getElementById('cartTotal');
-    //   cartTotalElement.innerText = totalPrice.toFixed(2);
-    // });
-
-    // ----------==================================--------
     let cartTotal = 0;
 
-    // Get all increment buttons
-    const incrementButtons = document.querySelectorAll('.increment');
-
-    // Loop through each increment button and add a click event listener
-    incrementButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Get the quantity element for this product
-        const quantityElement = button.parentNode.querySelector('.quantity');
-
-        // Get the current quantity value
-        let quantity = Number(quantityElement.innerText);
-
-        // Increment the quantity value
-        quantity++;
-
-        // Set the new quantity value in the quantity element
-        quantityElement.innerText = quantity;
-      });
-    });
-
-    // Get all decrement buttons
-    const decrementButtons = document.querySelectorAll('.decrement');
-
-    // Loop through each decrement button and add a click event listener
-    decrementButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Get the quantity element for this product
-        const quantityElement = button.parentNode.querySelector('.quantity');
-
-        // Get the current quantity value
-        let quantity = Number(quantityElement.innerText);
-
-        // If the quantity is already 1, do not decrement further
-        if (quantity === 1) {
-          return;
-        }
-
-        // Decrement the quantity value
-        quantity--;
-
-        // Set the new quantity value in the quantity element
-        quantityElement.innerText = quantity;
-      });
-    });
-
-    // Add an event listener to the Add to Cart button to calculate the total price for the product
-    const addToCartButton = document.querySelector('.btn-primary');
-    addToCartButton.addEventListener('click', () => {
-      // Get the quantity element for this product
-      const quantityElement = addToCartButton.parentNode.querySelector('.quantity');
-
-      // Get the current quantity value
-      const quantity = Number(quantityElement.innerText);
-
-      // Get the product price
-      const productPrice = Number(document.querySelector('.addToCart').getAttribute('data-price'));
-
-      // Calculate the total price for this product
-      const totalPrice = productPrice * quantity;
-
-      // Add the total price to the cart total
-      cartTotal += totalPrice;
-
-      // Update the cart total in the DOM
-      const cartTotalElement = document.getElementById('cartTotal');
-      cartTotalElement.innerText = cartTotal.toFixed(2);
-    });
-
-    // Add an event listener to the - button to calculate the total price for the product
-    const productDecrementButton = document.querySelector('.decrement');
-    productDecrementButton.addEventListener('click', () => {
-      const quantityElement = productDecrementButton.parentNode.querySelector('.quantity');
-      const quantity = Number(quantityElement.innerText);
-      const productPrice = Number(document.querySelector('.addToCart').getAttribute('data-price'));
-
-      const totalPrice = productPrice * quantity;
-
-      const cartTotalElement = document.getElementById('cartTotal');
-      cartTotalElement.innerText = totalPrice.toFixed(2);
-    });
-
-    // Add an event listener to the + button to calculate the total price for the product
-    const productIncrementButton = document.querySelector('.increment');
-    productIncrementButton.addEventListener('click', () => {
-      const quantityElement = productIncrementButton.parentNode.querySelector('.quantity');
-      const quantity = Number(quantityElement.innerText);
-      const productPrice = Number(document.querySelector('.addToCart').getAttribute('data-price'));
-
-      const totalPrice = productPrice * quantity;
-
-      const cartTotalElement = document.getElementById('cartTotal');
-      cartTotalElement.innerText = totalPrice.toFixed(2);
-    });
-
-
-    // using the animation effect---------
-    const cardSection = document.querySelector('.card-section');
-
-    // Get the distance from the top of the page to the section
-    const sectionTop = cardSection.offsetTop;
-
-    // Set up a scroll event listener
-    window.addEventListener('scroll', () => {
-      // Get the current scroll position
-      const scrollPos = window.scrollY;
-
-      // If the user has scrolled to the section, trigger the animation
-      if (scrollPos >= sectionTop) {
-        cardSection.classList.add('animate'); // Add CSS class to trigger animation
+    // Function to add a product to the cart
+    function addToCart(quantity, price, operation, title) {
+      if (operation === 'increment') {
+        cartTotal += quantity * price;
+        // Store the selected item in local storage
+        const item = { title, quantity, price };
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(item);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      } else if (operation === 'decrement') {
+        cartTotal -= quantity * price;
       }
+      document.getElementById('cartTotal').textContent = '₹' + cartTotal.toFixed(2);
+    }
+
+    document.querySelectorAll('.increment').forEach(button => {
+      button.addEventListener('click', event => {
+        const quantitySpan = event.currentTarget.parentElement.querySelector('.quantity');
+        const quantity = parseInt(quantitySpan.textContent);
+        const price = parseFloat(event.currentTarget.parentElement.querySelector('.card-text').textContent.slice(1));
+        const title = event.currentTarget.parentElement.querySelector('.card-title').textContent;
+        quantitySpan.textContent = quantity + 1;
+        addToCart(1, price, 'increment', title);
+      });
     });
 
+    document.querySelectorAll('.decrement').forEach(button => {
+      button.addEventListener('click', event => {
+        const quantitySpan = event.currentTarget.parentElement.querySelector('.quantity');
+        const quantity = parseInt(quantitySpan.textContent);
+        const price = parseFloat(event.currentTarget.parentElement.querySelector('.card-text').textContent.slice(1));
+        const title = event.currentTarget.parentElement.querySelector('.card-title').textContent;
+        if (quantity > 0) {
+          quantitySpan.textContent = quantity - 1;
+          addToCart(1, price, 'decrement', title);
+        }
+      });
+    });
+   
 
 
-
-
-
-
-
-
-
+    // Load items from local storage on page load
+    window.addEventListener('load', event => {
+      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      cartItems.forEach(item => {
+        const title = item.title;
+        const quantity = item.quantity;
+        document.querySelectorAll('.card-title').forEach(cardTitle => {
+          if (cardTitle.textContent === title) {
+            const quantitySpan = cardTitle.parentElement.querySelector('.quantity');
+            quantitySpan.textContent = quantity;
+          }
+        });
+      });
+    });
 
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
-
 </html>

@@ -18,67 +18,128 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-  <!-- the links i pprovided -->
+     <!-- favicon -->
+     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+     <link rel="manifest" href="/site.webmanifest">
+     
+  <!-- the links i provided -->
   <link rel="stylesheet" href="boot.css">
   <script src="boot.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Alkatar&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="Kingkayy farms.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-            KayyWrld
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-            </ul>
-            
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="new logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+        <b>KayyWrld</b>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-header">
+            <h4 align="center">Login</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                  placeholder="Enter email" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                  else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+              </div>
+              <div><a href="">
+                  <p>forgot password?</p>
+                </a></div>
+              <button type="submit" class="btn btn-primary">Login</button>
+              <a href="signup.html" class="btn btn-secondary">New User? Sign Up</a>
+            </form>
           </div>
         </div>
-      </nav>
+      </div>
+      <div class="col-m-6 d-none d-md-block">
+        <p></p>
+        <img src="welcome back.png" width="500" height="100" class="img-fluid custom-image-size" alt="Image">
+      </div>
+    </div>
+  </div>
+
+<!-- script -->
+<script>
+  function validateLogin() {
+    var email = document.getElementById("exampleInputEmail1").value;
+    var password = document.getElementById("exampleInputPassword1").value;
+
+    // Retrieve user credentials from local storage
+    var users = JSON.parse(localStorage.getItem("users"));
+
+    // Check if user credentials match those in local storage
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].email === email && users[i].password === password) {
+        alert("Login successful!");
+        return true;
+      }
+    }
+
+    // If user credentials are not found in local storage, display error message
+    alert("Invalid email or password.");
+    return false;
+  }
+</script>
 
 
-      <div class="container mt-4">
-		<div class="row">
-			<div class="col-md-6 mx-auto">
-				<div class="card">
-					<div class="card-header">
-						<h4>Login</h4>
-					</div>
-					<div class="card-body">
-						<form>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Email address</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-								<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputPassword1">Password</label>
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-							</div>
-                            <div><a href=""><p>forgot password?</p></a></div>
-							<button type="submit" class="btn btn-primary">Cancel</button>
-							<a href="#" class="btn btn-secondary">Login</a>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -87,6 +148,5 @@
 
 
 </body>
-</html>
 
-  
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Order Details</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,151 +18,330 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+
   <!-- the links i pprovided -->
   <link rel="stylesheet" href="boot.css">
   <script src="boot.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Alkatar&display=swap" rel="stylesheet">
+
+  <style>
+    .blur {
+      opacity: 0.5;
+    }
+  </style>
+
 </head>
 
 <body>
-  
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="Kingkayy farms.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
-            KayyWrld
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-            </ul>
-            <div class="d-flex flex-column flex-md-row">
-              <a href="order-details.html"><img src="cart.png" width="30" height="30" alt="Cart"></a>
-              <a href="signup.html"><button class="btn btn-warning ml-md-2 mt-10%">Sign Up</button></a>
-            </div>
-          </div>
-        </div>
-    </nav>
-   
-	
-      
-      
 
-    <div class="container mt-4">
-      <h2 class="mb-4" align="center">Please Proceed To Clear Your Items.</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <img src="9.png" alt="Product Image" class="card-img-top rounded">
-          </div>
-        </div>
-        <div class="col-md-4 mt-4">
-          <h3>KayyWrld Customized Hoodie</h3>
-          <p>Product Description</p>
-        </div>
-        <div class="col-md-4 mt-4">
-          <h3 class="text-right">$100</h3>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="new logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+        <b>KayyWrld</b>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Your Order</a>
+          </li>
+        </ul>
+        <div class="d-flex flex-column flex-md-row">
+          <a href="order-details.html"><img src="cart.png" width="30" height="30" alt="Cart"></a>
+          <a href="login.html"><button class="btn btn-warning ml-md-2 mt-10%">Login</button></a>
         </div>
       </div>
     </div>
-      
-      <div class="container mt-4">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img src="11.png" alt="Product Image" class="card-img-top rounded">
+  </nav>
+
+  <div class="container mt-4">
+    <h2 class="mb-4" align="center">Order Details</h2>
+    <table class="table">
+      <thead>
+        <tr id="cartItemsTableHeadRow">
+          <th></th>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+
+      <tbody id="cartItemsTableBody"></tbody>
+    </table>
+    <p>cartTotal: <span id="cartTotal"></span></p>
+  </div>
+  <button class="btn btn-danger" id="clearCartBtn">Clear Cart</button>
+
+  <!-- footer -->
+  <footer class="custom-footer bg-dark pt-5 pb-3 mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>Get To Know Us</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Connect with Us</h5>
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fab fa-facebook fa-lg"></i> Facebook</a></li>
+            <li><a href="#"><i class="fab fa-twitter fa-lg"></i> Twitter</a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
+            <li><a href="#"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Means Of Payment</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Binance</a></li>
+            <li><a href="#">PhonePe</a></li>
+            <li><a href="#">Bank Transfer</a></li>
+            <li><a href="tel:+233542367268">MTN Mobile Money</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Your Suggestions</h5>
+          <form>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder="Enter your query or suggestion"></textarea>
             </div>
-          </div>
-          <div class="col-md-4 mt-4">
-            <h3>KayyWrld Customized Hoodie</h3>
-            <p>Product Description</p>
-          </div>
-          <div class="col-md-4 mt-4">
-            <h3 class="text-right">$100</h3>
-          </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="subscribeCheckbox">
+              <label class="form-check-label" for="subscribeCheckbox">
+                Subscribe to our newsfeed
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Subscribe</button>
+          </form>
         </div>
       </div>
-      
+      <div>
+        <p class="copyright" align="center">&copy2023, KayyWlrdArtsAndDesigns.com <br>Legal Rights Reserved </p>
+      </div>
+    </div>
+
+  </footer>
 
 
-      
-      
-      
-      
-      
-      <!-- footer -->
-
-      <footer class="custom-footer bg-dark pt-5 pb-3 mt-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <h5>Get To Know Us</h5>
-              <ul class="list-unstyled">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Blog</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <h5>Connect with Us</h5>
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fab fa-facebook fa-lg"></i> Facebook</a></li>
-                <li><a href="#"><i class="fab fa-twitter fa-lg"></i> Twitter</a></li>
-                <li><a href="#"><i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
-                <li><a href="#"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <h5>Means Of Payment</h5>
-              <ul class="list-unstyled">
-                <li><a href="#">Binance</a></li>
-                <li><a href="#">PhonePe</a></li>
-                <li><a href="#">Bank Transfer</a></li>
-                <li><a href="tel:+233542367268">MTN Mobile Money</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <h5>Your Suggestions</h5>
-              <form>
-                <div class="form-group">
-                  <textarea class="form-control" rows="3" placeholder="Enter your query or suggestion"></textarea>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="subscribeCheckbox">
-                  <label class="form-check-label" for="subscribeCheckbox">
-                    Subscribe to our newsfeed
-                  </label>
-                </div>
-                <button type="submit" class="btn btn-primary mt-3">Subscribe</button>
-              </form>
-            </div>
-          </div>
-          <div>
-            <p class="copyright" align="center">&copy2023, KayyWlrdArtsAndDesigns.com <br>Legal Rights Reserved </p>
-          </div>
-          </div>
-        
-      </footer>
-      
-      
-      
-          
-	
 
 
-    
+
+  <script>
+
+    function displayCartItems() {
+      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      const cartItemsTableBody = document.getElementById('cartItemsTableBody');
+      cartItemsTableBody.innerHTML = '';
+      let cartTotal = 0;
+
+      // Create a map to store items by title and quantity
+      const itemMap = new Map();
+      cartItems.forEach(item => {
+        const isChecked = item.checked !== undefined ? item.checked : true; // Set default value to true if item.checked is undefined
+        const totalPrice = item.quantity * item.price;
+        cartTotal += isChecked ? totalPrice : 0;
+        const key = `${item.title}_${item.price}`;
+        if (itemMap.has(key)) {
+          // Item already exists, so increment the quantity
+          const existingItem = itemMap.get(key);
+          existingItem.quantity += item.quantity;
+        } else {
+          // Item doesn't exist yet, so add it to the map
+          itemMap.set(key, { ...item });
+        }
+      });
+
+      // Iterate over items in the map and add them to the table
+      for (let item of itemMap.values()) {
+        const isChecked = item.checked !== undefined ? item.checked : true; // Set default value to true if item.checked is undefined
+        const totalPrice = item.quantity * item.price;
+        const newRow = document.createElement('tr');
+        newRow.setAttribute('data-title', item.title);
+        newRow.innerHTML = `
+      <td><input type="checkbox" class="form-check-input product-checkbox" ${isChecked ? 'checked' : ''}></td>
+      <td>${item.title}</td>
+      <td> ${item.title}</td>
+      <td class="price">₹${item.price.toFixed(2)}</td>
+      <td class="quantity">${item.quantity}</td>
+      <td class="total-price">₹${totalPrice.toFixed(2)}</td>
+    `;
+        cartItemsTableBody.appendChild(newRow);
+
+        if (!isChecked) {
+          newRow.classList.add('blur'); // Blur row if item is unchecked
+        }
+      }
+
+      document.getElementById('cartTotal').textContent = '₹' + cartTotal.toFixed(2);
+    }
+
+    displayCartItems();
+
+
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    /// Event listener for checkbox change
+
+    document.querySelectorAll('.product-checkbox').forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const title = checkbox.parentElement.parentElement.getAttribute('data-title');
+        const index = cartItems.findIndex(item => item.title === title);
+        if (index !== -1) {
+          cartItems[index].checked = checkbox.checked;
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+          // Update checkbox styling
+          const uncheckedCheckboxes = document.querySelectorAll('.product-checkbox:not(:checked)');
+          uncheckedCheckboxes.forEach(checkbox => {
+            checkbox.closest('tr').classList.add('blur');
+          });
+          const checkedCheckboxes = document.querySelectorAll('.product-checkbox:checked');
+          checkedCheckboxes.forEach(checkbox => {
+            checkbox.closest('tr').classList.remove('blur');
+          });
+
+          let cartTotal = 0;
+          const totalPriceElements = document.querySelectorAll('.total-price');
+          totalPriceElements.forEach(element => {
+            if (element.closest('tr').querySelector('.product-checkbox').checked) {
+              const totalPrice = parseFloat(element.textContent.replace('₹', ''));
+              cartTotal += totalPrice;
+            }
+          });
+          document.getElementById('cartTotal').textContent = '₹' + cartTotal.toFixed(2);
+        } else {
+          console.error(`Item with title "${title}" not found in cart.`);
+        }
+      });
+    });
+
+    // updating the cart
+    function updateCart() {
+      let cartItemsTableBody = document.getElementById("cartItemsTableBody");
+      let cartTotal = document.getElementById("cartTotal");
+      let cartTotalPrice = 0;
+
+      cartItemsTableBody.innerHTML = "";
+
+      for (let i = 0; i < cart.length; i++) {
+        let item = cart[i];
+        let productCheckbox = document.createElement("input");
+        productCheckbox.type = "checkbox";
+        productCheckbox.checked = true;
+        productCheckbox.classList.add("form-check-input", "product-checkbox");
+        productCheckbox.addEventListener("click", function () {
+          let isChecked = this.checked;
+          let row = this.parentNode.parentNode;
+          if (!isChecked) {
+            row.classList.add("text-muted");
+          } else {
+            row.classList.remove("text-muted");
+          }
+          updateCartTotal();
+        });
+
+        let productName = document.createTextNode(item.name);
+        let productDescription = document.createTextNode(item.description);
+        let productPrice = document.createTextNode(item.price.toFixed(2));
+        let productQuantity = document.createElement("input");
+        productQuantity.type = "number";
+        productQuantity.min = "1";
+        productQuantity.value = item.quantity;
+        productQuantity.addEventListener("change", function () {
+          item.quantity = parseInt(productQuantity.value);
+          updateCartTotal();
+        });
+        let productTotalPrice = document.createTextNode(
+          (item.quantity * item.price).toFixed(2)
+        );
+        cartTotalPrice += item.quantity * item.price;
+
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.appendChild(productCheckbox);
+        tr.appendChild(td1);
+        let td2 = document.createElement("td");
+        td2.appendChild(productName);
+        tr.appendChild(td2);
+        let td3 = document.createElement("td");
+        td3.appendChild(productDescription);
+        tr.appendChild(td3);
+        let td4 = document.createElement("td");
+        td4.appendChild(productPrice);
+        tr.appendChild(td4);
+        let td5 = document.createElement("td");
+        td5.appendChild(productQuantity);
+        tr.appendChild(td5);
+        let td6 = document.createElement("td");
+        td6.appendChild(productTotalPrice);
+        tr.appendChild(td6);
+
+        cartItemsTableBody.appendChild(tr);
+      }
+
+      cartTotal.innerText = cartTotalPrice.toFixed(2);
+    }
+    function updateCartTotal() {
+      let cartItemsTableBody = document.getElementById("cartItemsTableBody");
+      let cartTotal = document.getElementById("cartTotal");
+      let cartTotalPrice = 0;
+      let isAnyChecked = false;
+
+      for (let i = 0; i < cartItemsTableBody.children.length; i++) {
+        let row = cartItemsTableBody.children[i];
+        let productCheckbox = row.querySelector(".product-checkbox");
+        if (productCheckbox.checked) {
+          let productTotalPrice = row.lastElementChild.innerText;
+          cartTotalPrice += parseFloat(productTotalPrice);
+          isAnyChecked = true;
+        } else {
+          let productTotalPrice = row.lastElementChild.innerText;
+          let productQuantity = row.querySelector("input[type='number']").value;
+          let uncheckedProductTotalPrice = parseFloat(productTotalPrice) * parseInt(productQuantity);
+          cartTotalPrice -= uncheckedProductTotalPrice;
+        }
+      }
+
+      if (isAnyChecked) {
+        cartTotal.innerText = cartTotalPrice.toFixed(2);
+      } else {
+        cartTotal.innerText = "0";
+      }
+    }
+    // Get the clear cart button element
+    const clearCartBtn = document.getElementById('clearCartBtn');
+
+    // Add click event listener to clear cart button
+    clearCartBtn.addEventListener('click', () => {
+      localStorage.removeItem('cartItems');
+      displayCartItems();
+    });
+  </script>
 </body>
+
 </html>

@@ -55,12 +55,12 @@ body {
   padding: 20px;
   border: 2px solid #cccccc;
 }
+.login a:hover{text-decoration: none;}
 
-
-
+/*----------------------- JavaScript----------------------------- */
 /* animation-------------- */
 #card-section {
-
+  background-color:burlywood;
   transform: translateX(-100%);
   animation: slide-in 1s forwards;
 }
@@ -71,25 +71,6 @@ body {
   }
 }
 
-/* quite ok */
-/* .animate-left {
-      animation: slide-in-left 1s forwards;
-      opacity: 0;
-    }
-    
-    @keyframes slide-in-left {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    } */
-/* quite ok ends */
 
-/*Signup Page*/
-/* .custom-image-size {
-  width: 10%;
-} */
+ 
+
